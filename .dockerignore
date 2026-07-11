@@ -1,0 +1,21 @@
+# Virtual environment — never copy this into Docker
+venv/
+.venv/
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+__pycache__/
+
+# Git files
+.git/
+.gitignore
+
+# MLflow local runs
+mlruns/
+mlartifacts/
+
+# Logs
+*.log
+
+# README (not needed inside container)
+README.md

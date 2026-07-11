@@ -2,7 +2,7 @@
 
 > Predict which employees are likely to leave in the next 3–6 months — and explain exactly why.
 
-🔴 **Live Demo** → [your-app.up.railway.app](https://YOUR_LIVE_URL)
+🔴 **Live Demo** → [employee-attrition.streamlit.app](https://employee-attrition-bl32xehex7ngteru5d3q7u.streamlit.app/)
 
 ---
 
@@ -35,7 +35,7 @@ Instead of just saying *"this employee might leave"*, it says:
 | Experiment tracking | MLflow |
 | Frontend | Streamlit |
 | Containerization | Docker |
-| Deployment | Railway |
+| Deployment | Streamlit Cloud |
 | Language | Python 3.11 |
 
 ---
@@ -80,7 +80,7 @@ Phase 6 ── SHAP explainability
 Phase 7 ── Streamlit app (single + bulk prediction)
         │
         ▼
-Phase 8 ── Docker + Railway deployment
+Phase 8 ── Docker + Streamlit Cloud deployment
 ```
 
 ---
@@ -181,3 +181,6 @@ employee-attrition/
 ---
 
 ## Author
+
+**Aswin**
+[GitHub](https://github.com/O-ASwIN-O)
