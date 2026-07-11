@@ -55,10 +55,10 @@ Phase 2 ── Feature engineering
            · Derived: SatisfactionScore, IncomePerYear
         │
         ▼
-Phase 3 ── Model training
-           · Baseline: Logistic Regression
-           · Ensemble: Random Forest
-           · Final:    XGBoost + SMOTE (fixes class imbalance)
+Phase 3 ── Model training & comparison
+           · Baseline: Logistic Regression  →  AUC 0.68
+           · Ensemble: Random Forest        →  AUC 0.75
+           · Final:    XGBoost + SMOTE      →  AUC 0.77  ✓
         │
         ▼
 Phase 4 ── Evaluation
@@ -85,15 +85,27 @@ Phase 8 ── Docker + Streamlit Cloud deployment
 
 ---
 
-## Key results
+## Model comparison
 
-| Metric | Score |
-|---|---|
-| AUC-ROC | ~0.84 |
-| Recall (attrition class) | ~0.72 |
-| Precision (attrition class) | ~0.51 |
+| Model | AUC-ROC | Notes |
+|---|---|---|
+| Logistic Regression | 0.68 | Simple baseline |
+| Random Forest | 0.75 | Better with non-linear patterns |
+| **XGBoost + SMOTE** | **0.77** | **Final model — best overall** |
 
-> **Why recall matters more than accuracy here:** A model that predicts "No" for every employee gets 84% accuracy but catches zero people who actually leave. We optimize for recall — catching real leavers — even at the cost of some false positives.
+---
+
+## Key results (XGBoost — final model)
+
+| Metric | Stayed (0) | Left (1) |
+|---|---|---|
+| Precision | 0.89 | 0.56 |
+| Recall | 0.94 | 0.38 |
+| F1-score | 0.92 | 0.46 |
+| **AUC-ROC** | | **0.77** |
+| **Accuracy** | | **0.85** |
+
+> **Why recall matters more than accuracy here:** A model that predicts "No" for every employee gets 84% accuracy but catches zero people who actually leave. We optimize for recall on the attrition class — catching real leavers — even at the cost of some false positives. The 0.38 recall on the minority class shows room for further improvement via hyperparameter tuning.
 
 ---
 
@@ -182,5 +194,5 @@ employee-attrition/
 
 ## Author
 
-**Aswin**
+**Aswín**
 [GitHub](https://github.com/O-ASwIN-O)
