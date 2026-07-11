@@ -1,0 +1,34 @@
+# Virtual environment
+venv/
+.env
+.venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Model files (too large for GitHub)
+# *.pkl
+*.joblib
+
+# MLflow runs (generated locally)
+mlruns/
+mlartifacts/
+
+# Data files (too large + private)
+# *.csv
+
+# VS Code
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
