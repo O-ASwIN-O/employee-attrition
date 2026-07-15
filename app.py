@@ -42,9 +42,9 @@ explainer = get_explainer()
 tab1, tab2 = st.tabs(["Single employee prediction", "Bulk CSV upload"])
 
 
-# ════════════════════════════════════════════════════════════════════════════════
+# 
 # TAB 1 — Single employee form
-# ════════════════════════════════════════════════════════════════════════════════
+# 
 with tab1:
     st.subheader("Enter employee details")
 
@@ -136,9 +136,9 @@ with tab1:
         plt.close()
 
 
-# ════════════════════════════════════════════════════════════════════════════════
+# 
 # TAB 2 — Bulk CSV upload
-# ════════════════════════════════════════════════════════════════════════════════
+# 
 with tab2:
     st.subheader("Upload employee CSV")
     st.caption("File must have the same columns as the IBM HR dataset.")
